@@ -1,11 +1,11 @@
 public class Animal {
-    private String food;
-    private String location;
+    boolean food;
+    String location;
 
     public Animal() {
     }
 
-    public Animal(String food, String location) {
+    public Animal(boolean food, String location) {
         this.food = food;
         this.location = location;
     }
@@ -14,18 +14,24 @@ public class Animal {
         System.out.println("Тваринка шумить");
     }
 
-    public void eat() {
-        System.out.println("Тваринка їсть");
+    public void eat(boolean food) {
+        this.food = food;
+        if (this.food) {
+            System.out.println("Тваринка їсть");
+        } else {
+            System.out.println("Тваринка не голодна");
+        }
     }
+
     public void sleep() {
         System.out.println("Тваринка спить");
     }
 
-    public String getFood() {
+    public boolean getFood() {
         return food;
     }
 
-    public void setFood(String food) {
+    public void setFood(boolean food) {
         this.food = food;
     }
 

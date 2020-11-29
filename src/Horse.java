@@ -3,8 +3,8 @@ public class Horse extends Animal {
     boolean makePrrPrr;
 
 
-    public Horse(boolean food, String location, boolean makePrrPrr) {
-        super(food, location);
+    public Horse(String food, String location, boolean hungry, boolean makePrrPrr) {
+        super(food, location, hungry);
         this.makePrrPrr = makePrrPrr;
     }
 
@@ -15,8 +15,8 @@ public class Horse extends Animal {
 
     @Override
     public void eat(boolean food) {
-        this.food = food;
-        if (this.food) {
+        this.hungry = food;
+        if (this.hungry) {
             System.out.println("Кінь їсть");
         } else {
             System.out.println("Кінь не голодний");

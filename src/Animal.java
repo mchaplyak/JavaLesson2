@@ -1,22 +1,24 @@
 public class Animal {
-    boolean food;
+    String food;
     String location;
+    boolean hungry;
 
     public Animal() {
     }
 
-    public Animal(boolean food, String location) {
+    public Animal(String food, String location, boolean hungry) {
         this.food = food;
         this.location = location;
+        this.hungry = hungry;
     }
 
     public void makeNoise() {
         System.out.println("Тваринка шумить");
     }
 
-    public void eat(boolean food) {
-        this.food = food;
-        if (this.food) {
+    public void eat(boolean hungry) {
+        this.hungry = hungry;
+        if (this.hungry) {
             System.out.println("Тваринка їсть");
         } else {
             System.out.println("Тваринка не голодна");
@@ -27,20 +29,28 @@ public class Animal {
         System.out.println("Тваринка спить");
     }
 
-    public boolean getFood() {
+    public String getFood() {
         return food;
-    }
-
-    public void setFood(boolean food) {
-        this.food = food;
     }
 
     public String getLocation() {
         return location;
     }
 
+    public boolean isHungry() {
+        return hungry;
+    }
+
+    public void setFood(String food) {
+        this.food = food;
+    }
+
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void setHungry(boolean hungry) {
+        this.hungry = hungry;
     }
 
     @Override
@@ -48,6 +58,7 @@ public class Animal {
         return "Animal{" +
                 "food='" + food + '\'' +
                 ", location='" + location + '\'' +
+                ", hungry=" + hungry +
                 '}';
     }
 }

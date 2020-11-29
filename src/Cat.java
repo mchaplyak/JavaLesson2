@@ -2,9 +2,8 @@ public class Cat extends Animal {
 
     boolean makePurPur;
 
-
-    public Cat(boolean food, String location, boolean makePurPur) {
-        super(food, location);
+    public Cat(String food, String location, boolean hungry, boolean makePurPur) {
+        super(food, location, hungry);
         this.makePurPur = makePurPur;
     }
 
@@ -14,9 +13,9 @@ public class Cat extends Animal {
     }
 
     @Override
-    public void eat(boolean food) {
-        this.food = food;
-        if (this.food) {
+    public void eat(boolean hungry) {
+        this.hungry = hungry;
+        if (this.hungry) {
             System.out.println("Котик їсть");
         } else {
             System.out.println("Котик не голодний");

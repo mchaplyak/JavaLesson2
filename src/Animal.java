@@ -10,13 +10,15 @@ public class Animal {
         this.location = location;
     }
 
-    public void makeNoise(String animalName) {
-        System.out.println(animalName + " sleep");
+    public void makeNoise() {
+        System.out.println("Тваринка шумить");
     }
 
     public void eat() {
+        System.out.println("Тваринка їсть");
     }
     public void sleep() {
+        System.out.println("Тваринка спить");
     }
 
     public String getFood() {
